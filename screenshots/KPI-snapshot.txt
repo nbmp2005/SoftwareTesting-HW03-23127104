@@ -1,0 +1,103 @@
+uid=11_0 RootWebArea "Admin Management | HCMUS EMS" url="https://prod-dev.ems-fitus.cloud/dashboard/admin/analytics/overview"
+  uid=11_1 complementary
+    uid=11_2 link "FIT EMS Admin" url="https://prod-dev.ems-fitus.cloud/dashboard/admin"
+      uid=11_3 image "FIT" url="https://prod-dev.ems-fitus.cloud/_next/image?url=%2Ffavicon.png&w=64&q=75"
+      uid=11_4 StaticText "EMS Admin"
+    uid=11_5 navigation
+      uid=11_6 link "Users Management" url="https://prod-dev.ems-fitus.cloud/dashboard/admin/users"
+        uid=11_7 StaticText "Users Management"
+      uid=11_8 link "Categories" url="https://prod-dev.ems-fitus.cloud/dashboard/admin/categories"
+        uid=11_9 StaticText "Categories"
+      uid=11_10 link "Academic Years" url="https://prod-dev.ems-fitus.cloud/dashboard/admin/academic-contexts"
+        uid=11_11 StaticText "Academic Years"
+      uid=11_12 link "Campuses" url="https://prod-dev.ems-fitus.cloud/dashboard/admin/campuses"
+        uid=11_13 StaticText "Campuses"
+      uid=11_14 link "Events Management" url="https://prod-dev.ems-fitus.cloud/dashboard/admin/events"
+        uid=11_15 StaticText "Events Management"
+      uid=11_16 link "Support requests 7" url="https://prod-dev.ems-fitus.cloud/dashboard/admin/complaints"
+        uid=11_17 StaticText "Support requests"
+        uid=11_18 StaticText "7"
+      uid=11_19 link "User Guide" url="https://prod-dev.ems-fitus.cloud/dashboard/admin/manual"
+        uid=11_20 StaticText "User Guide"
+      uid=11_21 button "Analytics"
+      uid=11_22 button "Settings"
+    uid=11_23 button "Collapse"
+  uid=11_24 banner
+    uid=11_25 button "Switch language" expandable haspopup="menu"
+    uid=11_26 link "Back to user dashboard" url="https://prod-dev.ems-fitus.cloud/dashboard"
+    uid=11_27 button "Notifications"
+    uid=11_28 StaticText "0"
+    uid=11_29 generic haspopup="menu"
+      uid=11_30 image "Tôi là Admin"
+  uid=11_31 main
+    uid=11_32 heading "Overview" level="1"
+    uid=11_33 button "2026 Year" expandable haspopup="listbox"
+    uid=11_34 StaticText "EVENTS"
+    uid=11_35 StaticText "50"
+    uid=11_36 StaticText "TOTAL USERS"
+    uid=11_37 StaticText "108"
+    uid=11_38 heading "By Time Status" level="3"
+    uid=11_39 application
+      uid=11_40 group
+      uid=11_41 group
+      uid=11_42 group
+        uid=11_43 group
+          uid=11_44 group
+            uid=11_45 graphics-symbol
+          uid=11_46 group
+            uid=11_47 graphics-symbol
+          uid=11_48 group
+            uid=11_49 graphics-symbol
+      uid=11_50 group
+      uid=11_51 group
+      uid=11_52 group
+      uid=11_53 group
+      uid=11_54 group
+      uid=11_55 group
+      uid=11_56 group
+      uid=11_57 group
+      uid=11_58 group
+    uid=11_59 StaticText "Upcoming"
+    uid=11_60 StaticText "15"
+    uid=11_61 StaticText "Ongoing"
+    uid=11_62 StaticText "13"
+    uid=11_63 StaticText "Ended"
+    uid=11_64 StaticText "22"
+    uid=11_65 heading "Users by Role" level="3"
+    uid=11_66 application
+      uid=11_67 group
+      uid=11_68 group
+      uid=11_69 group
+        uid=11_70 group
+          uid=11_71 group
+            uid=11_72 graphics-symbol
+          uid=11_73 group
+            uid=11_74 graphics-symbol
+          uid=11_75 group
+            uid=11_76 graphics-symbol
+          uid=11_77 group
+            uid=11_78 graphics-symbol
+      uid=11_79 group
+      uid=11_80 group
+      uid=11_81 group
+      uid=11_82 group
+      uid=11_83 group
+      uid=11_84 group
+      uid=11_85 group
+      uid=11_86 group
+      uid=11_87 group
+    uid=11_88 StaticText "Admin"
+    uid=11_89 StaticText "8"
+    uid=11_90 StaticText "Lecturer"
+    uid=11_91 StaticText "17"
+    uid=11_92 StaticText "Student"
+    uid=11_93 StaticText "64"
+    uid=11_94 StaticText "Guest"
+    uid=11_95 StaticText "19"
+    uid=11_96 heading "Rating Summary" level="3"
+    uid=11_97 StaticText "★ "
+    uid=11_98 StaticText "4.7"
+    uid=11_99 StaticText "Average Rating"
+    uid=11_100 StaticText "6"
+    uid=11_101 StaticText "Total Reviews"
+  uid=11_102 alert atomic live="assertive" relevant="additions text"
