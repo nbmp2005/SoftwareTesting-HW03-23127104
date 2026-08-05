@@ -187,15 +187,18 @@
 | IA-04-13 | Feedback | Ô nhập liệu (text box) hiển thị hiệu ứng viền/nổi bật trực quan (focus state). | Norman | NA | No text inputs on the Dashboard landing page. | |
 | IA-04-14 | Feedback | Các nút secondary actions phải được vô hiệu hóa (disabled) khi không có gì để thực hiện. | Norman | NA | No secondary action buttons on this page. | |
 
-**Tổng kết Screen 3:** [x] Pass / [y] Fail / [tổng số item]
 
 ---
 
 ## Tổng kết toàn bộ
 
-| Screen | Tổng item | Pass | Fail | % Pass |
-|---|---|---|---|---|
-| Screen 1 | | | | |
-| Screen 2 | | | | |
-| Screen 3 | | | | |
-| **TOTAL** | | | | |
+| Screen | Tổng item | Pass | Fail | N/A | % Pass (Đã test) | % Pass (Tổng) |
+|---|---|---|---|---|---|---|
+| Screen A4: Participants & Reviews | 50 | 24 | 6 | 20 | 80.0% (24/30) | 48.0% (24/50) |
+| Screen A5: Check-in tab | 50 | 21 | 4 | 25 | 84.0% (21/25) | 42.0% (21/50) |
+| Screen 3: Admin Dashboard (KPIs) | 50 | 11 | 2 | 37 | 84.6% (11/13) | 22.0% (11/50) |
+| **TOTAL** | **150** | **56** | **12** | **82** | **82.4% (56/68)** | **37.3% (56/150)** |
+
+*Ghi chú:*
+- `% Pass (Đã test)` được tính trên số lượng item có áp dụng và đã được kiểm thử trên giao diện (Pass / (Pass + Fail)).
+- `% Pass (Tổng)` được tính trên tổng số 50 items trong checklist chuẩn (Pass / 50).

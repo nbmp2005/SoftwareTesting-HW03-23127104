@@ -26,12 +26,12 @@ Scenario A — Admin manages events.
 
 > Chi tiết đầy đủ nằm ở file `04_checklist_execution.md`. Phần này tóm tắt.
 
-| Screen | Số item Pass | Số item Fail | Tỷ lệ Pass |
-|---|---|---|---|
-| Screen 1 | | | |
-| Screen 2 | | | |
-| Screen 3 | | | |
-| **Tổng** | | | |
+| Screen | Số item Pass | Số item Fail | N/A | Tỷ lệ Pass (Đã test) | Tỷ lệ Pass (Tổng) |
+|---|---|---|---|---|---|
+| Screen A4: Participants & Reviews | 24 | 6 | 20 | 80.0% (24/30) | 48.0% (24/50) |
+| Screen A5: Check-in tab | 21 | 4 | 25 | 84.0% (21/25) | 42.0% (21/50) |
+| Screen 3: Admin Dashboard (KPIs) | 11 | 2 | 37 | 84.6% (11/13) | 22.0% (11/50) |
+| **Tổng** | **56** | **12** | **82** | **82.4% (56/68)** | **37.3% (56/150)** |
 
 **Tóm tắt các bug phát hiện:** (chi tiết ở `05_bug_reports.md`)
 - [Bug 1 — mức độ nghiêm trọng]
