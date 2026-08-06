@@ -1824,3 +1824,377 @@ screen to test: just one Dashboard (/dashboard/admin — landing page)
 | IA-04-09 | Real-time update requires 2 simultaneous authenticated sessions |
 | IA-04-10 | Offline notification requires manual network disconnect |
 ```
+---
+## Prompt 16 
+**AI Tool:** Claude Sonnet 4.6
+**Ngày giờ:** 04/08/2026 08:05 PM
+**Prompt:**
+```Dựa vào chi tiết từng session user trong usability testing, hãy hoàn thành giúp tôi phần tổng kết file usertestingevident.md
+```
+**AI output:**
+```
+## PHASE 3 — Collect, Analyse & Report
+
+### 3.1. Bảng điểm SUS/UEQ-S chi tiết (10 câu, thang 1–5)
+
+> Công thức SUS chuẩn: câu lẻ (1,3,5,7,9) = điểm – 1; câu chẵn (2,4,6,8,10) = 5 – điểm; tổng × 2.5 = điểm/100.
+
+| Câu | P1 | P2 | P3 | P4 | P5 |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Q1 | 1 | 3 | 3 | 2 | 1 |
+| Q2 | 3 | 3 | 2 | 3 | 5 |
+| Q3 | 1 | 4 | 4 | 3 | 3 |
+| Q4 | 1 | 1 | 1 | 1 | 2 |
+| Q5 | 3 | 3 | 3 | 2 | 2 |
+| Q6 | 5 | 4 | 3 | 5 | 4 |
+| Q7 | 2 | 2 | 5 | 2 | 2 |
+| Q8 | 5 | 2 | 2 | 3 | 4 |
+| Q9 | 5 | 5 | 4 | 4 | 3 |
+| Q10 | 1 | 1 | 1 | 1 | 2 |
+| **Điểm SUS/100** | **42.5** | **65.0** | **75.0** | **50.0** | **35.0** |
+
+| | Trung bình | Min | Max |
+|---|---|---|---|
+| **SUS/100** | **53.5** | **35.0 (P5)** | **75.0 (P3)** |
+
+### 3.2. Bảng Metrics tổng hợp
+
+| Participant | Task Success | Time on task | Số lỗi/hesitation |
+|---|---|---|---|
+| P1 | Partial | 05:30 | 9 |
+| P2 | Completed | 03:00 | 1 |
+| P3 | Completed | 04:00 | 1 |
+| P4 | Completed | 01:00 | 0 |
+| P5 | Completed | 08:41 | 2 |
+| **Trung bình / Tỷ lệ** | **4/5 completed (80.0%)** | **04:26** | **2.6** |
+
+### 3.3. Ranked Findings (Severity 0–4)
+
+| # | Finding (pain point) | Type | Phạm vi | Severity | Người gặp | Đề xuất khắc phục |
+|---|---|---|---|---|---|---|
+| 1 | Không tìm thấy mã code/QR để check-in — có người gần như bỏ cuộc, định tạo tài khoản sinh viên mới chỉ để lấy mã, cũng như bị rối khi viết là barcode nhưng trong danh sách lại là Member code | Usability | Systemic (P3, P5) | 4 | P3, P5 | Hiển thị rõ nút/khu vực "Nhập Member code" ngay trên màn hình Check-in, có label tường minh, không yêu cầu suy luận |
+| 2 | Không tìm được nơi duyệt đăng ký đang Pending — phải mở User Guide mới biết (P5), tab điều hướng gây khó hiểu (P3) | Usability | Systemic (P3, P5) | 4 | P3, P5 | Thêm badge số lượng "Pending" ngay trên tab liên quan; đổi tên tab rõ nghĩa hơn (vd "Duyệt đăng ký") thay vì tên chung chung |
+| 3 | Bấm vào tên sự kiện không mở chi tiết — phải dùng đúng icon con mắt, gây kỳ vọng sai (khác hành vi quen thuộc) | Usability | Systemic (P1, P4, P5) | 3 | P1, P4, P5 | Cho phép click cả dòng (row-click) để mở chi tiết, giữ icon mắt như lối tắt phụ, không phải lối duy nhất |
+| 4 | Kết quả search bị mất khi quay lại danh sách sau khi xem chi tiết sự kiện | Bug | Isolated | 3 | P1 | Giữ lại query/filter state khi back về danh sách (lưu ở URL params hoặc session state) |
+| 5 | Thiếu validate: ngày đăng ký có thể diễn ra sau ngày check-in | Bug | Isolated | 3 | P1 | Thêm validate ràng buộc registration date ≤ check-in date ở form Add/Edit Event |
+| 6 | Web chậm liên tục, phải chờ rất lâu để load trang nhưng không có loading state | Usability | Isolated | 3 | P3 | Thêm spinning để người dùng biết đang tải trang, áp dụng Lazy Loading và Caching dữ liệu. |
+| 7 | Danh sách Review chỉ hiện dạng hàng, không link tới thông tin chi tiết người review để xác minh hợp lệ | Usability | Isolated | 2 | P4 | Thêm link/click-through từ mỗi review sang thông tin participant liên quan |
+| 8 | Bảng sự kiện có quá nhiều cột, phải cuộn ngang, không biết có thể cuộn cho đến khi để ý thanh cuộn; cột quan trọng (số lượng học sinh/giảng viên/thời gian đăng ký) nằm cuối, không liền kề | Usability | Isolated | 2 | P1 | Ưu tiên hiển thị cột quan trọng ở đầu bảng; thêm chỉ báo trực quan (vd shadow/arrow) báo hiệu có thể cuộn ngang |
+| 9 | Nút "All status"/"All time" hiện dropdown thay vì điều hướng, không khớp kỳ vọng dựa trên hành vi các nút khác | Usability | Isolated | 2 | P1 | Thêm icon mũi tên (chevron) trên các nút dropdown để phân biệt với nút điều hướng |
+| 10 | Header/tab phía trên thiếu padding, màu tab gần giống màu nền, khó nhận biết ngay khi vào trang | Usability | Isolated | 2 | P1 | Tăng contrast màu tab active/inactive với nền; thêm khoảng cách (padding) dưới header |
+| 11 | Thanh chuyển trang bị đẩy xuống rất xa, gây khó khăn khi chọn hiển thị 100 dòng/trang phải cuộn xuống dưới | Usability | Isolated | 1 | P1 | Cố định (sticky) thanh pagination ở cuối viewport thay vì cuối bảng |
+
+### 3.4. Prioritised Recommendations
+
+[Ưu tiên cao nhất] — Làm rõ luồng check-in (đổi thành entetr member code thay vì barcode) và luồng duyệt đăng ký (vị trí tab, badge Pending) — đây là 2 finding Systemic với severity 4, trực tiếp chặn việc hoàn thành nhiệm vụ chính của task, ảnh hưởng 2/5 participant mỗi finding (liên kết Finding #1, #2).
+
+[Ưu tiên cao] — Đổi hành vi click item sự kiện: cho phép click cả dòng thay vì chỉ icon mắt — finding Systemic, ảnh hưởng 3/5 participant, gây kỳ vọng sai lặp lại nhiều lần (liên kết Finding #3).
+
+[Ưu tiên trung bình] —  Chỉnh sửa logic ngày đăng ký/check-in và giữ lại state search khi back — cả hai đều là vấn đề chức năng (Bug).
+
+[Ưu tiên trung bình] — Bổ sung tiêu chí hợp lệ trong danh sách chờ duyệt và link review → chi tiết participant, giúp admin ra quyết định duyệt nhanh và chính xác hơn (liên kết Finding #6, #7).
+
+[Ưu tiên thấp] — Các cải tiến UI nhỏ: contrast tab/header, chỉ báo cuộn ngang, phân biệt input "Go to page" với nút bấm, cố định thanh pagination (liên kết Finding #8–12).
+
+### 3.5. Kết luận Usability
+
+Điểm SUS trung bình của 5 participant là 53.5/100, thấp hơn benchmark ngành (68/100) khoảng 14.5 điểm, xếp vào mức "below average" theo thang Bangor. Đáng chú ý là độ phân tán rất lớn (35–75), cho thấy vấn đề không nằm ở toàn bộ hệ thống một cách đồng đều mà tập trung vào một số điểm chặn cụ thể trong luồng task: 3 finding có mức Systemic — không biết mã code chec-in là gì, không tìm thấy nơi duyệt đăng ký, và hành vi click sự kiện không nhất quán — đều liên quan trực tiếp đến khả năng hoàn thành được nhiệm vụ chính (duyệt đăng ký + check-in) mà task scenario yêu cầu, không phải các vấn đề thẩm mỹ phụ. Đề xuất tổng thể: ưu tiên khắc phục 3 finding Systemic trước (Finding #1–3) vì chúng ảnh hưởng nhiều người và chặn trực tiếp task chính, sau đó mới xử lý các cải tiến UI nhỏ lẻ còn lại.
+```
+---
+
+## Prompt 17
+**AI Tool:** Claude Sonnet 4.6
+**Ngày giờ:** 04/08/2026 07:05 PM
+**Prompt:**
+```
+hướng dẫn tôi chi tiết từng bước cũng như prompt để hoành thành task 3 (Cross-Platform) và cách viết skill.md cho the compatibility-matrix runs
+```
+**AI output:** 
+```
+Hướng dẫn chi tiết Task 3 — Cross-Browser / Cross-Platform Testing
+
+Áp dụng cho đúng 3 screen của bạn: Dashboard / A4 (Participants & Reviews) / A5 (Check-in).
+
+BƯỚC 0 — Hiểu rõ yêu cầu tối thiểu trước khi bắt đầu (5 phút)
+
+Đọc lại đúng câu quan trọng nhất trong đề (§6, Task 3):
+
+"it must exercise every operating system at least once, every browser at least once, and every device class at least once, for each of the three screens"
+
+Nghĩa là: KHÔNG phải 1 ma trận chung cho cả 3 screen, mà là 3 ma trận riêng (1 ma trận/screen), và MỖI ma trận đó phải tự phủ đủ 3 OS + 5 browser + 3 device class. Đây là điểm rất nhiều bạn làm sai (tưởng chỉ cần phủ đủ 1 lần cho toàn bộ 3 screen gộp lại).
+
+Số cell tối thiểu mỗi screen: không cần đủ 3×5×3=45, chỉ cần tối thiểu 5 cell/screen (vì 5 là số lớn nhất trong 3 chiều — mỗi cell có thể "gánh" nhiều chiều cùng lúc, ví dụ 1 cell Windows+Chrome+Desktop tính luôn cho cả 3 chiều đó).
+
+Ví dụ 1 ma trận tối thiểu hợp lệ cho 1 screen (5 cell):
+
+Cell	OS	Browser	Device
+1	Windows	Chrome	Desktop
+2	Windows	Firefox	Desktop
+3	macOS	Safari	Desktop
+4	Android	Chrome	Phone
+5	iOS	Edge (hoặc Samsung Internet nếu Android)	Tablet
+
+→ Kiểm tra: OS có Windows/macOS/Android/iOS (đủ 3+) ✅ | Browser có Chrome/Firefox/Safari/Edge (đủ hơn 3, cần đủ 5 tổng thể — xem lại) | Device có Desktop/Phone/Tablet (đủ 3) ✅
+
+⚠️ Lưu ý: bảng trên mới có 4 browser khác nhau (Chrome, Firefox, Safari, Edge) — cần thêm Opera hoặc Samsung Internet ở 1 cell nữa để đủ 5 browser. Vậy thực tế cần khoảng 6 cell/screen để chắc chắn đủ cả 3 chiều mà không thiếu browser nào.
+
+BƯỚC 1 — Đăng ký công cụ (15 phút)
+Vào BrowserStack (browserstack.com) hoặc LambdaTest (lambdatest.com) → đăng ký tài khoản free trial bằng email trường (dễ được duyệt hơn, đôi khi có gói student).
+Xác nhận email, đăng nhập vào Live Testing (không phải Automate — Live là chạy tay qua giao diện web, phù hợp với bạn vì đây là kiểm thử thủ công, không cần viết code).
+Kiểm tra giới hạn trial (thường 30 phút/session hoặc giới hạn số phút/tháng) — lên kế hoạch dùng tiết kiệm.
+BƯỚC 2 — Chuẩn bị công cụ overlay MSSV lên ảnh (10 phút)
+
+Đề bắt buộc: "each screenshot must overlay your username in the form MSSV@....edu.vn".
+
+Cách làm nhanh:
+
+Dùng Windows Snipping Tool hoặc ShareX (free) → chụp ảnh → dùng công cụ Text/Annotate có sẵn để thêm dòng chữ [MSSV]@student.hcmus.edu.vn vào góc ảnh.
+Hoặc cách nhanh hơn: BrowserStack có tính năng ghi chú (annotate) ngay trong lúc live-test, dùng luôn công cụ đó để gõ chữ đè lên ảnh trước khi tải xuống.
+Đảm bảo overlay này luôn ở vị trí cố định (VD: góc trên bên phải) để nhất quán giữa các ảnh.
+BƯỚC 3 — Lập kế hoạch ma trận cụ thể cho từng screen (15 phút)
+Prompt nhờ AI gợi ý cách chọn cell tối ưu (ít cell nhất mà vẫn đủ coverage)
+Tôi cần lập ma trận compatibility testing cho 1 màn hình web, yêu cầu:
+- Phải phủ ít nhất 1 lần mỗi hệ điều hành trong nhóm: Windows, macOS, Android, iOS
+- Phải phủ ít nhất 1 lần mỗi trình duyệt trong nhóm: Chrome, Firefox, Safari, Edge, Opera
+  (hoặc Samsung Internet thay cho Opera trên mobile)
+- Phải phủ ít nhất 1 lần mỗi loại thiết bị: Desktop, Tablet, Phone
+
+Hãy đề xuất cho tôi SỐ CELL ÍT NHẤT có thể (mỗi cell gồm 1 tổ hợp OS+Browser+Device)
+sao cho vẫn đảm bảo đủ coverage 3 chiều trên, trình bày dạng bảng, ưu tiên các tổ
+hợp thực tế phổ biến (VD: Safari chỉ có trên macOS/iOS, không có bản Windows).
+
+Copy prompt + output vào 08_ai_audit_report.md.
+
+Gợi ý bảng chuẩn (dùng lại cho cả 3 screen, chỉ đổi URL/nội dung):
+
+Cell	OS	Browser	Device
+1	Windows	Chrome	Desktop
+2	Windows	Firefox	Desktop
+3	macOS	Safari	Desktop
+4	macOS	Edge	Tablet (nếu có iPad giả lập)
+5	Android	Chrome	Phone
+6	Android	Samsung Internet hoặc Opera	Tablet
+7	iOS	Safari	Phone
+
+→ 7 cell/screen × 3 screen = 21 cell tổng — vừa đủ an toàn, không quá tải thời gian trial.
+
+BƯỚC 4 — Chạy thật trên BrowserStack (phần chính, 1.5-2 giờ)
+Với MỖI cell, làm đúng quy trình sau:
+Trong BrowserStack Live, chọn đúng OS + Browser + Device theo bảng kế hoạch.
+Dán URL vào (VD: URL trực tiếp Dashboard, hoặc URL kèm ?tab=student-review để vào thẳng A4).
+Đăng nhập bằng admin@gmail.com / Admin@123.
+Chờ trang load xong hoàn toàn.
+Quan sát kỹ: có bị vỡ layout, chữ tràn, nút không bấm được, ảnh không hiện không?
+Chụp ảnh, overlay MSSV, đặt tên theo convention: cp_[screen]_[os]_[browser]_[device].png
+Ghi vào bảng 06_cross_platform_matrix.md: Pass nếu hiển thị đúng, Fail nếu có vấn đề (kèm mô tả cụ thể loại lỗi).
+Checklist nhanh khi quan sát mỗi cell (để không bỏ sót)
+ Layout tổng thể có bị vỡ/tràn không?
+ Text có bị cắt/che khuất không?
+ Nút bấm có kích thước đủ lớn để bấm trên mobile không (đặc biệt A4 có nhiều nút: Approve/Reject/Cancel/Apply)?
+ Với A5 (Check-in) — khung quét mã có hiển thị đúng tỉ lệ trên mobile không (vì đây là màn hình rất có thể được dùng thật trên điện thoại tại sự kiện)?
+ Với Dashboard — 4 thẻ KPI có xếp lại thành dạng cột dọc hợp lý trên mobile không, hay bị đè lên nhau?
+Prompt hỗ trợ viết mô tả lỗi rendering (sau khi bạn đã quan sát thật)
+Tôi vừa quan sát 1 lỗi hiển thị khi test trên [OS/Browser/Device] tại màn hình
+[tên screen] của hệ thống EMS: [mô tả thô những gì bạn thấy, ví dụ: "4 thẻ KPI
+trên Dashboard bị xếp chồng lên nhau, chữ 'Total Check-ins' bị che mất 1 phần
+bởi thẻ bên cạnh khi xem trên iPhone Safari"]
+
+Hãy viết lại thành 1 ghi chú lỗi chuẩn, phân loại đúng 1 trong các loại: overflow,
+overlap, broken layout, unreadable text, non-responsive control.
+BƯỚC 5 — Điền vào file 06_cross_platform_matrix.md (song song lúc chạy, không dồn cuối)
+
+Với mỗi screen, điền đúng bảng đã có sẵn khung, kiểm tra dòng cuối "đã phủ đủ 3 OS / 5 browser / 3 device chưa" trước khi chuyển sang screen tiếp theo.
+
+Git commit sau mỗi screen: cross-platform: Dashboard, cross-platform: A4, cross-platform: A5.
+
+BƯỚC 6 — Tổng hợp và log bug (nếu có Fail)
+
+Mọi cell Fail → viết vào 04_bug_reports.md (ghi "Phát hiện ở Task 3") + submit Google Form + đưa vào 07_bug_usability_findings_log.md.
+
+Viết SKILL.md cho "compatibility-matrix-builder"
+
+Giờ tôi viết file skill này, dùng Playwright MCP để hỗ trợ phần có thể tự động hóa (giả lập viewport desktop/tablet/phone, chụp ảnh tự động) — còn phần browser thật đa nền tảng (Safari trên macOS thật, Chrome trên Android thật...) vẫn cần BrowserStack/LambdaTest thật, vì Playwright chạy trên máy bạn không thể giả lập Safari/iOS thật 100% chính xác. Skill này đóng vai trò trợ lý sinh khung bảng + chụp ảnh responsive ở mức Playwright làm được, phần còn lại (browser thật khác nhau) vẫn cần bạn thao tác tay trên BrowserStack.
+
+Ran a command, created a file, read a file
+Ran a command, created a file, read a file
+Điểm quan trọng nhất trong skill này — bạn cần hiểu rõ trước khi dùng
+
+Tôi thiết kế skill này với 1 nguyên tắc trung thực bắt buộc: Playwright chạy trên máy bạn dùng engine Chromium, KHÔNG THỂ giả lập thật Safari/Firefox/Android/iOS thật. Nếu để skill "tự nhận" đã test được Safari trong khi thực chất chỉ resize cửa sổ Chrome, đây sẽ là gian lận dữ liệu — vi phạm trực tiếp mục 12 (Anti-AI-Cheat Constraints) của đề.
+
+Vì vậy skill này chia rõ 2 phần:
+
+Phần	Skill làm được	Cách dùng
+Tự động hóa cục bộ	Resize viewport giả lập Desktop/Tablet/Phone trên Chrome, chụp ảnh, phát hiện lỗi layout cơ bản (tràn, đè, chữ bị cắt), tự overlay MSSV	Dùng để kiểm tra nhanh responsive trước khi lên BrowserStack — giúp bạn biết trước chỗ nào có khả năng lỗi để tập trung test kỹ hơn
+Bàn giao thủ công	Sinh sẵn bảng "TODO" liệt kê chính xác cell nào (Safari, Firefox, real mobile...) bạn bắt buộc phải tự làm tay trên BrowserStack	Đây là phần bạn vẫn phải làm theo Bước 1-6 tôi hướng dẫn ở trên, không thể giao hết cho AI
+Tóm tắt việc bạn cần làm tiếp
+Bước 0-3 (hiểu yêu cầu, đăng ký BrowserStack, chuẩn bị overlay, lập kế hoạch) — làm tay như hướng dẫn phần đầu.
+Bước 4 (chạy thật) — phần lớn vẫn phải làm tay trên BrowserStack vì đây là core requirement, skill chỉ hỗ trợ phần Chrome-desktop/responsive để bạn kiểm tra nhanh trước.
+Đặt skill vào .claude/skills/compatibility-matrix-builder/SKILL.md, demo thử trên 1 screen (VD: resize thử Dashboard ở 3 kích thước) để quay video cho mục 8.
+
+Bạn muốn tôi giúp viết luôn prompt/script để chạy thử skill này ngay (demo Playwright resize Dashboard qua 3 viewport) không?
+```
+
+---
+## Prompt 18
+**AI Tool:** Claude Sonnet 4.6
+**Ngày giờ:** 04/08/2026 07:30 PM
+**Prompt:**
+```
+**AI Tool:** Claude Sonnet 4.6
+**Ngày giờ:** 02/08/2026 08:05 PM
+**Prompt:**
+```
+**AI output:**
+````
+Có — nhưng tôi cần làm rõ để bạn hiểu chính xác giới hạn thật sự nằm ở đâu, vì có 2 loại "giả lập" hoàn toàn khác nhau mà dễ bị nhầm.
+
+Phân biệt 2 loại "chạy trình duyệt khác" — đây là điểm mấu chốt
+Loại	Là gì	Có phải browser/OS thật không?
+1. Viewport emulation (cách skill tôi viết đang làm)	Vẫn là Chrome/Chromium trên máy bạn, chỉ đổi kích thước cửa sổ + giả user-agent string để "tự xưng" là Safari/mobile	❌ KHÔNG — chỉ là Chrome "đóng giả", DOM render engine vẫn là Chromium, không phản ánh đúng cách Safari (WebKit) hay Firefox (Gecko) render thật
+2. Cloud device farm thật (BrowserStack Automate / LambdaTest / Sauce Labs API)	Điều khiển browser thật, chạy trên OS thật, đôi khi trên thiết bị vật lý thật, qua giao thức WebDriver/Playwright-over-CDP kết nối tới máy chủ đám mây	✅ CÓ — đây mới là thứ thật sự cho ra kết quả đáng tin
+
+→ Điều tôi nói "không làm được" ở câu trả lời trước là loại 1 (Playwright chạy Chrome local giả làm Safari) — đúng là vô nghĩa, không nên báo cáo như thật.
+
+Nhưng loại 2 hoàn toàn khả thi để AI tự động hóa — đây chính là câu trả lời cho câu hỏi của bạn.
+
+Vậy AI có thể tự động điều khiển BrowserStack/LambdaTest thật không?
+
+Có, cả 2 dịch vụ đều cung cấp API/Automate cho phép Playwright/Selenium kết nối tới browser thật trên cloud của họ, thay vì chạy trên máy bạn.
+
+Searched the web
+Searched the web
+
+Tin vui: hoàn toàn có 1 giải pháp thật, cụ thể — BrowserStack có sẵn MCP server chính thức mà AI có thể điều khiển trực tiếp. Đây chính xác là thứ bạn cần.
+
+Cách hoạt động thật của giải pháp này
+
+BrowserStack hỗ trợ cả MCP server chạy local (qua @browserstack/mcp-server, dùng username + access key) lẫn MCP server từ xa (dùng OAuth, không cần cài gì). Với MCP này, AI có thể:
+
+Tự khởi động phiên test thủ công trên BrowserStack Live, chọn tổ hợp trình duyệt/desktop và mobile thật
+Tự khởi động phiên test ứng dụng thật trên thiết bị iOS/Android thật qua App Live
+Chạy các luồng automation qua BrowserStack Automate/App Automate, tương thích với Playwright
+Tự lấy ảnh chụp và log lỗi từ các session đã chạy
+
+Đây là điểm khác biệt cốt lõi so với những gì tôi nói trước: công cụ này giúp bạn xác minh hành vi người dùng thật thay vì chỉ kiểm tra responsive layout thông thường, vì nó thực thi trên real device cloud — máy thật và thiết bị di động thật, thay vì trình giả lập.
+
+Nhưng có 1 điều cần cân nhắc thật kỹ trước khi làm
+
+Dù MCP giúp việc điều khiển bằng ngôn ngữ tự nhiên tiện hơn, bản chất vẫn là bạn phải trả phí theo phiên/phút chạy trên cloud device, vẫn phải viết và bảo trì script Playwright/Selenium nền, và MCP không thay đổi việc ai sở hữu luồng làm việc đó — nghĩa là:
+
+Trial free của BrowserStack có giới hạn phút/session — nếu để AI tự động chạy hàng loạt, bạn dễ hết trial rất nhanh trước khi làm xong 3 screen × 7 cell.
+Vẫn cần bạn cấu hình (username, access key) và giám sát — không phải "bấm 1 nút xong hết".
+Quan trọng nhất với bài tập của bạn: đề bài không cấm việc này, nhưng bạn vẫn phải tuân thủ nguyên tắc "guide AI từng bước, human review" — nghĩa là dù dùng MCP để AI tự mở session và chụp ảnh, bạn vẫn phải tự mắt xem lại từng ảnh để xác nhận Pass/Fail, không được để AI tự kết luận thay hoàn toàn.
+Vậy có nên đổi sang cách này không?
+
+Cân nhắc thực tế cho bạn:
+
+Tiêu chí	Cách cũ (bạn tự thao tác BrowserStack Live)	Cách mới (AI qua BrowserStack MCP)
+Độ tin cậy dữ liệu	Cao — chính bạn nhìn thấy	Cao nếu bạn review lại ảnh AI chụp, thấp nếu bạn tin AI mù quáng
+Tốc độ	Chậm hơn (bạn thao tác tay từng cell)	Nhanh hơn đáng kể nếu AI tự động hóa được chuỗi 7 cell/screen
+Rủi ro hết trial	Kiểm soát được (bạn tự canh thời gian)	Cao hơn nếu AI chạy lặp không kiểm soát
+Cài đặt	Không cần cài gì, dùng web trực tiếp	Cần cài @browserstack/mcp-server + lấy access key, mất thêm thời gian setup
+Đúng tinh thần "AI-First guide từng bước"	Không tận dụng AI ở bước thực thi (chỉ dùng AI ở bước viết mô tả lỗi)	Tận dụng đúng, miễn bạn vẫn giữ vai trò review từng kết quả
+Khuyến nghị của tôi
+
+Nếu bạn còn nhiều thời gian và muốn tận dụng đúng tinh thần "AI-First" của đề (G9.4 — Collaborate with AI for exploratory testing), cách dùng BrowserStack MCP là lựa chọn tốt hơn — nó biến việc bạn "guide AI" trở nên rõ ràng và có ý nghĩa thật (thay vì chỉ nhờ AI viết văn bản), và đây cũng là bằng chứng rất mạnh cho Agent Skill của bạn (mục 8 — 10 điểm), vì nó chứng minh skill thực sự chạy được test thật trên hạ tầng thật, không chỉ là công cụ resize cửa sổ giả.
+
+Bạn có muốn tôi:
+
+Viết hướng dẫn cài đặt @browserstack/mcp-server cụ thể (lấy access key, cấu hình vào Antigravity), hoặc
+Viết lại SKILL.md cho "compatibility-matrix-builder" dùng đúng BrowserStack MCP thay vì Playwright local (bản này sẽ chính xác và "thật" hơn nhiều so với bản tôi vừa viết)?
+````
+
+---
+
+## Prompt 19
+**AI Tool:** Claude Sonnet 4.6
+**Ngày giờ:** 02/08/2026 07:40 PM
+**Prompt:**
+```
+* Viết hướng dẫn cài đặt `@browserstack/mcp-server` cụ thể (lấy access key, cấu hình vào Antigravity), hoặc
+* Viết lại `SKILL.md` cho "compatibility-matrix-builder" dùng đúng BrowserStack MCP thay vì Playwright local
+```
+
+**AI output:**
+```
+Tôi sẽ làm cả 2 việc bạn yêu cầu — hướng dẫn cài đặt trước, rồi viết lại SKILL.md đúng chuẩn BrowserStack MCP.
+
+PHẦN 1 — Hướng dẫn cài @browserstack/mcp-server vào Antigravity
+Bước 1 — Đăng ký tài khoản BrowserStack + lấy Access Key
+Vào browserstack.com đăng ký tài khoản nếu chưa có (nếu là project mã nguồn mở, BrowserStack có gói miễn phí riêng, nhưng với bạn dùng gói trial thường là đủ).
+Sau khi đăng nhập, vào Account Settings, lấy username và access_key của bạn.
+Kiểm tra phiên bản Node.js bằng lệnh node --version — khuyến nghị bản v22.15.0 (LTS). Nếu chưa có, tải tại nodejs.org.
+
+⚠️ Lưu ý bảo mật: access_key là thông tin nhạy cảm — không đưa vào file bạn commit lên Git public, không dán vào chat công khai.
+
+Bước 2 — Cấu hình MCP trong Antigravity
+
+Antigravity dùng file mcp_config.json (đường dẫn ~/.gemini/antigravity/mcp_config.json, đã hướng dẫn ở lượt trước). Mở file này và thêm:
+
+json
+{
+  "mcpServers": {
+    "browserstack": {
+      "command": "npx",
+      "args": ["-y", "@browserstack/mcp-server@latest"],
+      "env": {
+        "BROWSERSTACK_USERNAME": "<username_của_bạn>",
+        "BROWSERSTACK_ACCESS_KEY": "<access_key_của_bạn>"
+      }
+    }
+  }
+}
+
+Nếu bạn đã có playwright và chrome-devtools trong file từ trước, gộp chung:
+
+json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"]
+    },
+    "browserstack": {
+      "command": "npx",
+      "args": ["-y", "@browserstack/mcp-server@latest"],
+      "env": {
+        "BROWSERSTACK_USERNAME": "<username_của_bạn>",
+        "BROWSERSTACK_ACCESS_KEY": "<access_key_của_bạn>"
+      }
+    }
+  }
+}
+Bước 3 — Khởi động và kiểm tra
+Lưu file, đóng và mở lại Antigravity.
+Mở panel MCP Servers (như hướng dẫn trước: "..." → MCP Servers → Manage MCP Servers) — bạn sẽ thấy browserstack xuất hiện.
+Server này hỗ trợ 20 tool khác nhau, bao gồm quản lý test case, chạy test thủ công/tự động trên web và app, debug lỗi, quét accessibility, và các khả năng agent AI khác.
+Thử prompt đơn giản để test kết nối: "Mở 1 phiên BrowserStack Live, Chrome trên Windows, vào URL https://prod-dev.ems-fitus.cloud/dashboard/admin" — nếu server hoạt động đúng, agent sẽ tự mở phiên và báo kết quả.
+Lưu ý quan trọng cho bài tập của bạn
+Server local này không hỗ trợ Local Testing (không test được app đứng sau VPN, firewall, hoặc localhost) — EMS của bạn chạy qua ngrok/domain public nên không vấn đề gì. 
+glama
+Khi AI dùng tool "Root Cause Analysis" để phân tích lỗi test, nó chỉ trả về đề xuất, không bao giờ tự áp dụng thay đổi code — trợ lý AI phải trình bày đề xuất và chờ xác nhận rõ ràng từ bạn — đây chính là nguyên tắc "human review" mà đề bài yêu cầu, tự động được đảm bảo bởi chính thiết kế của BrowserStack MCP.
+Mỗi phiên bạn mở qua MCP vẫn tính vào giới hạn phút của gói trial — theo dõi kỹ để không hết hạn giữa chừng khi đang test.
+PHẦN 2 — Viết lại SKILL.md dùng đúng BrowserStack MCP
+Ran a command, created a file, read a file
+Ran a command, created a file, read a file
+Điểm khác biệt quan trọng so với bản trước
+	Bản Playwright local (trước)	Bản BrowserStack MCP (mới)
+Browser/OS có thật không	❌ Chỉ Chrome giả lập	✅ Thật 100% — Safari thật, Firefox thật, thiết bị Android/iOS thật
+Có thể tự tin ghi Pass/Fail cho Safari/Firefox không	Không (phải để TODO manual)	Có — vì đây là session thật
+Rủi ro chính	Báo cáo sai sự thật nếu nhầm	Tốn phút trial nếu không quản lý kỹ (đã thêm hẳn mục 2.2 để gom nhóm session tiết kiệm quota, và guardrail bắt buộc xác nhận trước khi tiêu tốn phút)
+Đúng tinh thần "AI-First, guide từng bước"	Vừa phải	Cao hơn nhiều — vì đây là AI thật sự thực thi công việc test có ý nghĩa (không chỉ viết văn bản hộ bạn)
+Việc bạn cần làm tiếp theo
+Lấy username + access_key từ BrowserStack (Bước 1 ở Phần 1).
+Cấu hình vào mcp_config.json của Antigravity.
+Trước khi chạy thật cho cả 21 cell, nên thử 1 session demo nhỏ (VD: chỉ 1 cell Windows+Chrome+Desktop cho Dashboard) để xác nhận MCP hoạt động đúng và bạn hiểu luồng, tránh lãng phí quota nếu có lỗi cấu hình.
+Đặt skill vào đúng vị trí: .claude/skills/compatibility-matrix-builder/SKILL.md.
+Nhớ log lại việc cài đặt + prompt đầu tiên dùng MCP này vào 08_ai_audit_report.md.
+
+⚠️ Lưu ý về ngân sách thời gian: với gói trial thường giới hạn khá chặt (thường vài chục phút), 21 session có thể vượt quota nhanh nếu mỗi session mất 2-3 phút thao tác. Bạn nên ưu tiên chạy các cell "không thể giả lập được" trước (Safari, Firefox, thiết bị mobile thật) — còn cell Windows+Chrome+Desktop thì có thể vẫn giữ nguyên cách làm tay đơn giản trên chính máy bạn (đây vốn không cần BrowserStack vì Chrome trên Windows bạn có thể có sẵn), để dành quota BrowserStack cho những gì thực sự cần cloud thật.
+
+Bạn có muốn tôi tính lại bảng ma trận 21 cell theo hướng tối ưu quota (ưu tiên real device/browser hiếm, còn Chrome/Windows desktop thì làm tay không tốn BrowserStack) không?
+```
