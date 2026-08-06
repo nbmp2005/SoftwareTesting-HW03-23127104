@@ -1,28 +1,5 @@
-# AI Critique (200–300 words, Mandatory)
+Trong quá trình kiểm thử hệ thống EMS, em nhận thấy AI vừa là một trợ thủ đắc lực, vừa bộc lộ những điểm mù rõ rệt. Về mặt tích cực, AI đã giúp em tăng tốc đáng kể quy trình làm việc thông qua khả năng cấu trúc hóa văn bản xuất sắc. Cụ thể, AI hỗ trợ định dạng nhanh các quan sát thô thành bug report chuẩn chỉnh, tự động tính toán và phân tích điểm SUS từ kết quả usability testing, cũng như định hình thành công cấu trúc Agent Skill tích hợp BrowserStack MCP để tự động hóa ma trận kiểm thử.
 
-> Viết 1 đoạn văn (không phải bullet list) 200-300 từ, trả lời:
-> - AI đã sai/thiếu/lệch (biased) ở đâu?
-> - Vì sao AI không phát hiện ra vấn đề đó?
-> - Bài học gì bạn rút ra về việc collaborate với AI?
+Tuy nhiên, AI lại bộc lộ sự rập khuôn khi xử lý các logic nghiệp vụ đặc thù. Khi khởi tạo GUI checklist, nó đưa ra các tiêu chí quá chung chung và bỏ sót hoàn toàn quy tắc duyệt đăng ký nhiều vai trò (multi-role) ở màn hình A4 hay các trạng thái check-in ở A5. Trong quá trình đánh giá, AI có xu hướng "ép" lỗi vào các heuristic không khớp, điển hình là việc cố gán lỗi nút "Cancel All" vô tác dụng vào tiêu chí dành riêng cho nút "Submit/Save". Ban đầu, AI cũng đánh đồng việc thay đổi kích thước cửa sổ trình duyệt (viewport) với kiểm thử đa thiết bị thực sự.
 
----
-
-[Bắt đầu viết đoạn văn tại đây. Gợi ý cấu trúc 3 phần:
-
-**Phần 1 (chỗ AI sai/thiếu):** Ví dụ AI khi được yêu cầu generate GUI checklist ban đầu đã tạo ra
-các item mang tính tổng quát (generic) như "buttons should be clickable" hoặc bỏ qua hoàn toàn
-các đặc thù nghiệp vụ của EMS như quy tắc duyệt multi-role trong A4, hay 4 trạng thái quét
-check-in trong A5. AI cũng có xu hướng không đề cập tới accessibility, dark mode, hay i18n sâu
-trừ khi được prompt trực tiếp.
-
-**Phần 2 (vì sao AI không phát hiện ra):** Vì AI không có quyền truy cập trực tiếp vào EMS, nó
-chỉ dựa vào phần mô tả bạn cung cấp trong prompt; nếu prompt không đủ chi tiết về logic
-nghiệp vụ, AI sẽ trả lời ở mức general heuristic thay vì domain-specific. Ngoài ra AI thiên về
-pattern phổ biến trong training data (web app "điển hình"), nên bỏ sót các ràng buộc rất đặc thù
-chỉ có trong EMS.
-
-**Phần 3 (bài học):** Bài học rút ra là AI hoạt động tốt nhất như một "bộ khung tăng tốc" (scaffold)
-chứ không phải nguồn sự thật cuối cùng; người dùng vẫn phải hiểu sâu hệ thống thực tế, cung
-cấp context cụ thể, và luôn review/bổ sung bằng kiến thức miền (domain knowledge) của mình...]
-
-*(Đảm bảo tổng số từ nằm trong khoảng 200-300 từ trước khi nộp)*
+Nguyên nhân cốt lõi là AI thiếu khả năng tương tác trực quan và không có "trực giác QA". Nó chỉ dựa vào các pattern của ứng dụng web phổ biến nên không thể tự nhận diện các ràng buộc độc quyền của EMS. Bài học lớn nhất em rút ra là AI chỉ nên đóng vai trò "bộ khung tăng tốc" (scaffold). Người kiểm thử bắt buộc phải giữ quyền điều hướng: cung cấp ngữ cảnh chi tiết, tự tay thao tác kiểm chứng và dùng domain knowledge để hiệu chỉnh mọi kết luận máy móc.
