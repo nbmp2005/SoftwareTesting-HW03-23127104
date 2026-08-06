@@ -168,33 +168,36 @@ và xác nhận là hệ thống đã ghi nhận thành công."
   - Q2: Vẫn biết cách quay lại
   - Q3: Tốc độ bình thường, không nhanh không chậm
   - Q4: Chắc cũng đúng
-- **Link recording:**
+- **Link recording:** [Video user1](https://youtu.be/wuI8epnUKYI)
 
 ### Session P2
-- **Thời gian bắt đầu/kết thúc:** 14:10 – 14:13
+- **Thời gian bắt đầu/kết thúc:** 14:10 – 14:12
 - **Task success:** Completed
-- **Time on task:** 03:00
+- **Time on task:** 01:15
 - **Số lỗi/hesitation quan sát được:** 1
 - **Ghi chú quan sát (think-aloud, friction points):**
+  - Người dùng bối rối lúc review student không biết phải nhấn xác nhận ở đâu, mất vài giây để suy nghĩ
+  - Khi vào phần check-in, người dùng không biết phải lấy barcode ở đâu nên đã checkin với kí tự ngẫu nhiên ở lần đầu tiên; phải có chỉ dẫn mới có thể tìm được code.
 - **Phản hồi SUS/UEQ-S (điểm từng câu):**
+
 | # | Câu | Điểm (1–5) |
 |---|-----|------------|
-| 1 | Tôi nghĩ mình sẽ muốn dùng hệ thống này thường xuyên. |3|
-| 2 | Tôi thấy hệ thống phức tạp một cách không cần thiết. |3 |
-| 3 | Tôi thấy hệ thống dễ sử dụng. |4|
-| 4 | Tôi nghĩ mình cần người am hiểu kỹ thuật hỗ trợ mới dùng được. |1|
-| 5 | Tôi thấy các chức năng trong hệ thống kết hợp nhịp nhàng với nhau. |3|
-| 6 | Tôi thấy hệ thống có quá nhiều điểm thiếu nhất quán. |4|
-| 7 | Tôi nghĩ hầu hết mọi người sẽ học cách dùng hệ thống này rất nhanh. |2 |
-| 8 | Tôi thấy hệ thống rất rườm rà, bất tiện khi sử dụng. |2|
-| 9 | Tôi cảm thấy rất tự tin khi sử dụng hệ thống. |5|
-| 10 | Tôi phải học rất nhiều thứ trước khi có thể bắt đầu dùng. |1|
+| 1 | Tôi nghĩ mình sẽ muốn dùng hệ thống này thường xuyên. | 3 |
+| 2 | Tôi thấy hệ thống phức tạp một cách không cần thiết. | 3 |
+| 3 | Tôi thấy hệ thống dễ sử dụng. | 4 |
+| 4 | Tôi nghĩ mình cần người am hiểu kỹ thuật hỗ trợ mới dùng được. | 1 |
+| 5 | Tôi thấy các chức năng trong hệ thống kết hợp nhịp nhàng với nhau. | 3 |
+| 6 | Tôi thấy hệ thống có quá nhiều điểm thiếu nhất quán. | 4 |
+| 7 | Tôi nghĩ hầu hết mọi người sẽ học cách dùng hệ thống này rất nhanh. | 2 |
+| 8 | Tôi thấy hệ thống rất rườm rà, bất tiện khi sử dụng. | 2 |
+| 9 | Tôi cảm thấy rất tự tin khi sử dụng hệ thống. | 5 |
+| 10 | Tôi phải học rất nhiều thứ trước khi có thể bắt đầu dùng. | 1 |
 - **Trả lời probe questions:**
   - Q1: T chắc chắn mình làm đúng
   - Q2: Thấy cũng dễ hiểu, vẫn biết cách quay lại
   - Q3: Tốc độ nhanh, vừa ổn
-  - Q4: Thấy không tin web này nổi
-- **Link recording (nếu có):**
+  - Q4: Không hoàn toàn tin tưởng
+- **Link recording (nếu có):** [Video user2](https://youtu.be/p3lxP7p3pfs)
 
 ### Session P3
 - **Thời gian bắt đầu/kết thúc:** 8:25 - 8:29
@@ -208,24 +211,25 @@ và xác nhận là hệ thống đã ghi nhận thành công."
 
   - Tìm kiếm quanh màn hình check-in, không xác định được cách lấy mã code.
 - **Phản hồi SUS/UEQ-S (điểm từng câu):**
+
 | # | Câu | Điểm (1–5) |
 |---|-----|------------|
-| 1 | Tôi nghĩ mình sẽ muốn dùng hệ thống này thường xuyên. |3|
-| 2 | Tôi thấy hệ thống phức tạp một cách không cần thiết. |2 |
-| 3 | Tôi thấy hệ thống dễ sử dụng. |4|
-| 4 | Tôi nghĩ mình cần người am hiểu kỹ thuật hỗ trợ mới dùng được. |1|
-| 5 | Tôi thấy các chức năng trong hệ thống kết hợp nhịp nhàng với nhau. |3 |
-| 6 | Tôi thấy hệ thống có quá nhiều điểm thiếu nhất quán. |3|
-| 7 | Tôi nghĩ hầu hết mọi người sẽ học cách dùng hệ thống này rất nhanh. |5 |
-| 8 | Tôi thấy hệ thống rất rườm rà, bất tiện khi sử dụng. |2|
-| 9 | Tôi cảm thấy rất tự tin khi sử dụng hệ thống. |4|
-| 10 | Tôi phải học rất nhiều thứ trước khi có thể bắt đầu dùng. |1 |
+| 1 | Tôi nghĩ mình sẽ muốn dùng hệ thống này thường xuyên. | 3 |
+| 2 | Tôi thấy hệ thống phức tạp một cách không cần thiết. | 2 |
+| 3 | Tôi thấy hệ thống dễ sử dụng. | 4 |
+| 4 | Tôi nghĩ mình cần người am hiểu kỹ thuật hỗ trợ mới dùng được. | 1 |
+| 5 | Tôi thấy các chức năng trong hệ thống kết hợp nhịp nhàng với nhau. | 3 |
+| 6 | Tôi thấy hệ thống có quá nhiều điểm thiếu nhất quán. | 3 |
+| 7 | Tôi nghĩ hầu hết mọi người sẽ học cách dùng hệ thống này rất nhanh. | 5 |
+| 8 | Tôi thấy hệ thống rất rườm rà, bất tiện khi sử dụng. | 2 |
+| 9 | Tôi cảm thấy rất tự tin khi sử dụng hệ thống. | 4 |
+| 10 | Tôi phải học rất nhiều thứ trước khi có thể bắt đầu dùng. | 1 |
 - **Trả lời probe questions:**
   - Q1: Thực hiện đúng nhưng mà nhiều chỗ khó hiểu quá
   - Q2: Mò 1 chút vẫn ra, chỗ barcode làm t nghĩ nếu không có gợi ý thì khó làm được
   - Q3: Chậm hơn t nghĩ
   - Q4: Không tin
-- **Link recording (nếu có):**
+- **Link recording (nếu có):** [Video user 3](https://youtu.be/X572lo60YqM)
 
 ### Session P4
 - **Thời gian bắt đầu/kết thúc:** 21:00-21:01
@@ -255,7 +259,7 @@ và xác nhận là hệ thống đã ghi nhận thành công."
   - Q2: Làm sai thì quan sát một lúc vẫn ra được
   - Q3: Nhanh hơn t nghĩ, chắc do t thông minh chứ thấy web hơi rườm rà
   - Q4: Cũng tạm tin
-- **Link recording (nếu có):**
+- **Link recording (nếu có):** [Video user 4](https://youtu.be/NpDySOcA9lA)
 
 ### Session P5
 - **Thời gian bắt đầu/kết thúc:**  21:00 - 21:09
@@ -267,25 +271,26 @@ và xác nhận là hệ thống đã ghi nhận thành công."
   - Bấm vào tên sự kiện trong danh sách, chờ trangchi tiết hiện ra nhưng không có phản hồi.
   - Mở danh sách người đăng ký, lọc theo trạng tháimPending, sau đó tìm quanh màn hình không thấy nút duyệt; cuối cùng mở User Guide để đọc hướng dẫn.
   - Tìm mã code của học sinh để check-in, không thấy ở đâu; định thoát ra đăng ký một tài khoản sinh viên mới để lấy mã code.
-- **Phản hồi SUS/UEQ-S (điểm từng câu):**   
+- **Phản hồi SUS/UEQ-S (điểm từng câu):**
+
 | # | Câu | Điểm (1–5) |
 |---|-----|------------|
-| 1 | Tôi nghĩ mình sẽ muốn dùng hệ thống này thường xuyên. |1|
+| 1 | Tôi nghĩ mình sẽ muốn dùng hệ thống này thường xuyên. | 1 |
 | 2 | Tôi thấy hệ thống phức tạp một cách không cần thiết. | 5 |
-| 3 | Tôi thấy hệ thống dễ sử dụng. |3|
-| 4 | Tôi nghĩ mình cần người am hiểu kỹ thuật hỗ trợ mới dùng được. |2|
-| 5 | Tôi thấy các chức năng trong hệ thống kết hợp nhịp nhàng với nhau. |2|
-| 6 | Tôi thấy hệ thống có quá nhiều điểm thiếu nhất quán. |4|
-| 7 | Tôi nghĩ hầu hết mọi người sẽ học cách dùng hệ thống này rất nhanh. |2 |
-| 8 | Tôi thấy hệ thống rất rườm rà, bất tiện khi sử dụng. |4|
-| 9 | Tôi cảm thấy rất tự tin khi sử dụng hệ thống. |3|
-| 10 | Tôi phải học rất nhiều thứ trước khi có thể bắt đầu dùng. |2|
+| 3 | Tôi thấy hệ thống dễ sử dụng. | 3 |
+| 4 | Tôi nghĩ mình cần người am hiểu kỹ thuật hỗ trợ mới dùng được. | 2 |
+| 5 | Tôi thấy các chức năng trong hệ thống kết hợp nhịp nhàng với nhau. | 2 |
+| 6 | Tôi thấy hệ thống có quá nhiều điểm thiếu nhất quán. | 4 |
+| 7 | Tôi nghĩ hầu hết mọi người sẽ học cách dùng hệ thống này rất nhanh. | 2 |
+| 8 | Tôi thấy hệ thống rất rườm rà, bất tiện khi sử dụng. | 4 |
+| 9 | Tôi cảm thấy rất tự tin khi sử dụng hệ thống. | 3 |
+| 10 | Tôi phải học rất nhiều thứ trước khi có thể bắt đầu dùng. | 2 |
 - **Trả lời probe questions:**
   - Q1: Không có chỗ nào không chắc. Không có nút nào gây khó hiểu
   - Q2: Tự tìm cách được
   - Q3: Tốc độ chậm hơn t nghĩ
   - Q4: Thấy cũng đáng tin
-- **Link recording (nếu có):**
+- **Link recording (nếu có):** [Video user 5](https://youtu.be/FPgPtLPVer4)
 
 ---
 
@@ -326,8 +331,6 @@ và xác nhận là hệ thống đã ghi nhận thành công."
 
 ### 3.3. Ranked Findings (Severity 0–4)
 
-Vì dữ liệu thực tế cho ra nhiều hơn 3 finding, mình liệt kê đầy đủ và rank theo severity giảm dần, có gộp các note giống nhau từ nhiều participant thành 1 finding (Systemic):
-
 | # | Finding (pain point) | Type | Phạm vi | Severity | Người gặp | Đề xuất khắc phục |
 |---|---|---|---|---|---|---|
 | 1 | Không tìm thấy mã code/QR để check-in — có người gần như bỏ cuộc, định tạo tài khoản sinh viên mới chỉ để lấy mã, cũng như bị rối khi viết là barcode nhưng trong danh sách lại là Member code | Usability | Systemic (P3, P5) | 4 | P3, P5 | Hiển thị rõ nút/khu vực "Nhập Member code" ngay trên màn hình Check-in, có label tường minh, không yêu cầu suy luận |
@@ -340,8 +343,7 @@ Vì dữ liệu thực tế cho ra nhiều hơn 3 finding, mình liệt kê đ�
 | 8 | Bảng sự kiện có quá nhiều cột, phải cuộn ngang, không biết có thể cuộn cho đến khi để ý thanh cuộn; cột quan trọng (số lượng học sinh/giảng viên/thời gian đăng ký) nằm cuối, không liền kề | Usability | Isolated | 2 | P1 | Ưu tiên hiển thị cột quan trọng ở đầu bảng; thêm chỉ báo trực quan (vd shadow/arrow) báo hiệu có thể cuộn ngang |
 | 9 | Nút "All status"/"All time" hiện dropdown thay vì điều hướng, không khớp kỳ vọng dựa trên hành vi các nút khác | Usability | Isolated | 2 | P1 | Thêm icon mũi tên (chevron) trên các nút dropdown để phân biệt với nút điều hướng |
 | 10 | Header/tab phía trên thiếu padding, màu tab gần giống màu nền, khó nhận biết ngay khi vào trang | Usability | Isolated | 2 | P1 | Tăng contrast màu tab active/inactive với nền; thêm khoảng cách (padding) dưới header |
-| 11 | Ô "Go to page" trông giống nút bấm, gây nhầm lẫn là button thay vì input | Usability | Isolated | 1 | P1 | Thêm border rõ ràng dạng input field, đặt placeholder "Nhập số trang" |
-| 12 | Thanh chuyển trang bị đẩy xuống rất xa khi chọn hiển thị 100 dòng/trang | Usability | Isolated | 1 | P1 | Cố định (sticky) thanh pagination ở cuối viewport thay vì cuối bảng |
+| 11 | Thanh chuyển trang bị đẩy xuống rất xa, gây khó khăn khi chọn hiển thị 100 dòng/trang phải cuộn xuống dưới | Usability | Isolated | 1 | P1 | Cố định (sticky) thanh pagination ở cuối viewport thay vì cuối bảng |
 
 ### 3.4. Prioritised Recommendations
 
