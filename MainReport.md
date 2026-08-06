@@ -270,7 +270,7 @@ Task 1B ghi nhận 2 lỗi navigation ở mức "kỹ thuật": mất pagination
 
 ## 6. Bug & Usability Findings Log — Tổng kết
 
-> Chi tiết đầy đủ 28 finding: `08_bug_usability_findings_log.md`.
+> Chi tiết đầy đủ 28 finding: [BugUsabilityFindingsLog.md](BugUsabilityFindingsLog.md).
 
 | Phân loại theo Type | Số lượng |
 |---|---|
