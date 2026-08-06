@@ -9,7 +9,7 @@
 | IA-01-01 | General UI | Hệ thống lưới và khoảng cách (Grid & Spacing) căn lề nhất quán trên toàn màn hình. | Nielsen #4: Consistency | Pass | |
 | IA-01-02 | General UI | Font chữ (typography) nhất quán về kích thước, độ dày (bold/regular) và phân cấp tiêu đề. | Nielsen #4: Consistency | Pass | |
 | IA-01-03 | General UI | Màu sắc của các nút hành động (Primary, Secondary) và trạng thái nhất quán. | Norman: Signifiers | Pass | |
-| IA-01-04 | General UI | Đa ngôn ngữ (EN/VI) hoạt động đầy đủ, không bị dịch thiếu hoặc chồng lấp chữ. | Nielsen #4: Consistency | Fail | Role name chuyển sang tiếng anh vẫn là "học voeen tham dự" |
+| IA-01-04 | General UI | Đa ngôn ngữ (EN/VI) hoạt động đầy đủ, không bị dịch thiếu hoặc chồng lấp chữ. | Nielsen #4: Consistency | Fail | Role name chuyển sang tiếng anh vẫn là "học viên tham dự" |
 | IA-01-05 | General UI | Trạng thái rỗng (Empty state) được hiển thị rõ ràng khi không có sự kiện/dữ liệu nào. | Nielsen #1: Visibility | Pass | |
 | IA-01-06 | General UI | Trạng thái đang tải (Loading state/skeleton) hiển thị khi kéo dữ liệu chậm. | Nielsen #1: Visibility | Fail | Không có hiệu ứng loading  |
 | IA-01-07 | General UI | Trang web tương thích tốt và tự động co giãn (Responsive) trên màn hình. | Nielsen #4: Consistency | Fail | Trang không được responsive |
@@ -58,7 +58,7 @@
 | IA-04-11 | Feedback | Hệ thống vô hiệu hóa nút gửi hoặc ngăn chặn gửi dữ liệu trùng lặp khi người dùng click đúp nút Submit. | Nielsen #5: Error Prev. | NA | | | |
 | IA-04-12 | Feedback | Mã QR/Barcode trên vé hiển thị rõ nét (không bị mờ), có kích thước tối thiểu đảm bảo quét được bằng ứng dụng camera thông thường. | Nielsen #1: Visibility | NA | | | |
 | IA-04-13 | Feedback | Ô nhập liệu (text box) hiển thị hiệu ứng viền/nổi bật trực quan (focus state) khi nhấp chuột vào để người dùng nhận biết rõ ràng đang thao tác/nhập liệu. | Norman: Feedback | Pass | | | |
-| IA-04-14 | Feedback | Các nút secondary actions phải được vô hiệu hóa (disabled + đổi con trỏ) khi không có gì để thực hiện, hoặc phải hiển thị phản hồi rõ ràng (toast/thông báo) nếu vẫn cho phép bấm mà không có tác dụng gì | Norman: Feedback + Signifiers | Fail | Nút Cancel All không bị disasble dù không có tác dụng hay thực hiện thao tác gì
+| IA-04-14 | Feedback | Các nút secondary actions phải được vô hiệu hóa (disabled + đổi con trỏ) khi không có gì để thực hiện, hoặc phải hiển thị phản hồi rõ ràng (toast/thông báo) nếu vẫn cho phép bấm mà không có tác dụng gì | Norman: Feedback + Signifiers | Fail | Nút Cancel All không bị disable dù không có tác dụng hay thực hiện thao tác gì
 
 
 ## Screen A5: Check-in tab
@@ -198,7 +198,3 @@
 | Screen A5: Check-in tab | 50 | 21 | 4 | 25 | 84.0% (21/25) | 42.0% (21/50) |
 | Screen 3: Admin Dashboard (KPIs) | 50 | 11 | 2 | 37 | 84.6% (11/13) | 22.0% (11/50) |
 | **TOTAL** | **150** | **56** | **12** | **82** | **82.4% (56/68)** | **37.3% (56/150)** |
-
-*Ghi chú:*
-- `% Pass (Đã test)` được tính trên số lượng item có áp dụng và đã được kiểm thử trên giao diện (Pass / (Pass + Fail)).
-- `% Pass (Tổng)` được tính trên tổng số 50 items trong checklist chuẩn (Pass / 50).
