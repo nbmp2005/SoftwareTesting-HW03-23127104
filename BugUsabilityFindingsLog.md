@@ -1,18 +1,34 @@
-# Bug & Usability Findings Log (Aggregated)
-
-> File này TỔNG HỢP toàn bộ finding đã submit qua Google Form (Task 1B bugs + Task 2 usability issues + Task 3 rendering fails).
-> Phải khớp với số lượng đã nộp trên Google Form — TA sẽ đối chiếu.
-> Có thể xuất bản Excel/CSV thay vì Markdown nếu muốn, miễn giữ đủ cột.
-
-| ID | Scenario/Screen | Type (Bug/Usability) | Description | Steps/Heuristic | Severity | Suggested fix | Screenshot ref | Form-submission timestamp |
+# Bug & Usability Findings Log 
+| ID | Scenario/Screen | Type | Description | Steps/Heuristic vi phạm | Severity | Suggested fix | Screenshot ref | Form-submission timestamp |
 |---|---|---|---|---|---|---|---|---|
-| F-001 | [VD: A4] | Bug | [Mô tả ngắn] | [Steps hoặc heuristic vi phạm] | [0-4] | [Đề xuất] | screenshots/F-001.png | [dd/mm/yyyy hh:mm] |
-| F-002 | | Usability | | | | | | |
-| F-003 | | Bug | | | | | | |
-| F-004 | | Usability | | | | | | |
-| F-005 | | | | | | | | |
-
-<!-- Thêm dòng tương ứng với mỗi finding đã submit Google Form -->
+| F-001 | A4 — Participants & Reviews | Bug | Đa ngôn ngữ lỗi: role hiển thị sai thành "học viên tham dự" khi chuyển sang tiếng Anh | IA-01-04 — Nielsen #4: Consistency | 2 | Rà soát và sửa lại chuỗi dịch cho role name | [images/bugs/A4-bug-IA-01-04.png](images/bugs/A4-bug-IA-01-04.png) | 23:17 |
+| F-002 | A4 — Participants & Reviews | Usability | Không có loading state/skeleton khi dữ liệu tải chậm | IA-01-06 — Nielsen #1: Visibility | 1 | Thêm skeleton loading cho bảng/danh sách | [images/bugs/A4-bug-IA-01-06.png](images/bugs/A4-bug-IA-01-06.png) | 23:18 |
+| F-003 | A4 — Participants & Reviews | Bug | Trang không responsive trên các kích thước màn hình | IA-01-07 — Nielsen #4: Consistency | 3 | Thêm breakpoint responsive, kiểm tra riêng ở màn A4 | [images/bugs/A4-bug-IA-01-07.png](images/bugs/A4-bug-IA-01-07.png) | 23:18 |
+| F-004 | A4 — Participants & Reviews | Bug | Nút Back không giữ trạng thái phân trang: đổi số dòng hiển thị thành 50, vào chi tiết sự kiện rồi Back, hệ thống tự reset về 5 dòng | IA-03-03 — Nielsen #3: User Control | 3 | Lưu pagination state (page size, page number) vào URL params hoặc session state | [images/bugs/A4-bug-IA-03-03.png](images/bugs/A4-bug-IA-03-03.png) | 23:19 |
+| F-005 | A4 — Participants & Reviews | Usability | Không hiển thị thông báo khi mất kết nối mạng, trang bị đứng im lặng | IA-04-10 — Nielsen #1: Visibility | 2 | Thêm banner/toast báo mất kết nối mạng | [images/bugs/A4-bug-IA-04-10.png](images/bugs/A4-bug-IA-04-10.png) | 23:20 |
+| F-006 | A4 — Participants & Reviews | Bug | Nút "Cancel All" không bị disable dù không có tác dụng/thao tác gì khi bấm | IA-04-14 — Norman: Feedback + Signifiers | 2 | Disable nút khi không có item để cancel, hoặc hiện toast phản hồi rõ ràng | [images/bugs/A4-bug-IA-04-14.png](images/bugs/A4-bug-IA-04-14.png) | 23:20 |
+| F-007 | A5 — Check-in tab | Bug | Sidebar/layout không responsive trên mobile viewport (375px): sidebar đè lên nội dung chính, không collapse | IA-01-07 — Nielsen #4: Consistency | 3 | Thêm breakpoint để tự động collapse sidebar ở mobile | [images/bugs/A5-bug-IA-01-07.png](images/bugs/A5-bug-IA-01-07.png) | 23:21 |
+| F-008 | A5 — Check-in tab | Bug | URL không cập nhật parameter khi chuyển giữa sub-tab "Checked In" và "Scan Logs" → không deep-link được đến sub-tab cụ thể | IA-03-11 — Nielsen #4: Consistency | 2 | Thêm query param cho sub-tab hiện tại (vd `?tab=checkin&subtab=scanlogs`) | [images/bugs/A5-bug-IA-03-11.png](images/bugs/A5-bug-IA-03-11.png) | 23:22 |
+| F-009 | A5 — Check-in tab | Bug | Click "Export" với bảng rỗng ("No results") không kích hoạt bất kỳ toast hay feedback nào | IA-04-01 — Norman: Feedback | 2 | Hiện toast "Không có dữ liệu để xuất" khi bảng rỗng | [images/bugs/A5-bug-IA-04-01.png](images/bugs/A5-bug-IA-04-01.png) | 23:22 |
+| F-010 | A5 — Check-in tab | Bug | Nút "Export" khi bảng rỗng vẫn enabled/clickable nhưng không có phản hồi nào (không file, không API call) | IA-04-14 — Norman: Feedback + Signifiers | 2 | Disable nút Export khi bảng rỗng | [images/bugs/A5-bug-IA-04-14.png](images/bugs/A5-bug-IA-04-14.png) | 23:22 |
+| F-011 | Screen 3 — Admin Dashboard | Bug | Trang không responsive: ở 375px, sidebar giữ nguyên 256px, nội dung chính tràn lề ngang; nút hamburger tồn tại nhưng không hoạt động | IA-01-07 — Nielsen #4: Consistency | 3 | Sửa hamburger button để thực sự collapse sidebar khi bấm/ở mobile | [images/bugs/Dashboard-bug-IA-01-07.png](images/bugs/Dashboard-bug-IA-01-07.png) | 23:23 |
+| F-012 | Screen 3 — Admin Dashboard | Bug | Active state không hiển thị trên sidebar khi ở trang root `/dashboard/admin` — cả 7 link đều inactive, không có `aria-current` | IA-03-02 — Nielsen #1: Visibility | 1 | Thêm nav item "Dashboard/Overview" khớp route root và highlight đúng | [images/bugs/Dashboard-bug-IA-03-02.png](images/bugs/Dashboard-bug-IA-03-02.png) | 23:23 |
+| F-013 | Dashboard — iOS Safari Phone (390px) | Bug | Non-responsive / layout broken: tiêu đề Dashboard & các thẻ KPI bị tràn khỏi khung nhìn màn hình | Cross-browser test | 3 | Áp dụng responsive breakpoint riêng cho WebKit/iOS Safari | [images/cross_platform/cp_dashboard_ios_safari_phone.png](images/cross_platform/cp_dashboard_ios_safari_phone.png) | 23:24 |
+| F-014 | A4 — Android/Samsung Internet/Tablet (768px) | Bug | Horizontal overflow: bảng 5 cột (STUDENT, ROLE, ACTION...) + hàng nút bấm vượt quá bề rộng 768px, xuất hiện thanh cuộn ngang toàn trang | Cross-browser test — thiếu `overflow-x:auto` trên table wrapper | 2 | Bọc bảng trong container có `overflow-x: auto`, tách riêng khỏi layout tổng | [images/cross_platform/cp_A4_android_samsunginternet_tablet.png](images/cross_platform/cp_A4_android_samsunginternet_tablet.png) | 23:25 |
+| F-015 | A4 — iOS Safari Phone (390px) | Bug | Layout broken: sidebar cố định không ẩn, cụm Review Students bị đẩy tràn lề phải, nút duyệt & ô tìm kiếm bị giấu sau viền màn hình | Cross-browser test | 3 | Sửa sidebar responsive; đảm bảo action buttons luôn trong viewport | [images/cross_platform/cp_A4_ios_safari_phone.png](images/cross_platform/cp_A4_ios_safari_phone.png) | 23:26 |
+| F-016 | A5 — Android/Samsung Internet/Tablet (768px) | Bug | Grid overflow: hàng 6 thẻ KPI xếp ngang không wrap xuống dòng ở 768px, làm vỡ khung Check-in | Cross-browser test — grid layout không responsive | 2 | Đổi grid cố định sang `grid-template-columns` responsive (auto-fit/wrap) theo breakpoint | [images/cross_platform/cp_A5_android_samsunginternet_tablet.png](images/cross_platform/cp_A5_android_samsunginternet_tablet.png) | 23:26 |
+| F-017 | A5 — iOS Safari Phone (390px) | Bug | Unusable UI: sidebar làm lệch toàn bộ ô quét Barcode & bảng Scan Logs off-screen trên iPhone | Cross-browser test | 3 | Sửa sidebar responsive; test lại toàn bộ luồng check-in trên mobile Safari | [images/cross_platform/cp_A5_ios_safari_phone.png](images/cross_platform/cp_A5_ios_safari_phone.png) | 23:27 |
+| F-018 | Check-in flow (Task scenario) | Usability | Không tìm thấy Member code/QR để check-in; nhầm lẫn giữa "barcode" (label) và "Member code" (dữ liệu thực tế) — 2/5 participant gần bỏ cuộc, có người định tạo tài khoản mới chỉ để lấy mã | Quan sát think-aloud P3, P5 (Systemic) | 4 | Hiển thị rõ khu vực "Nhập Member code" ngay trên màn hình Check-in với label nhất quán, không dùng thuật ngữ "barcode" gây hiểu nhầm | [images/usability_bug/usability_bug1](images/usability_bug/usability_bug1.png) | 23:29 |
+| F-019 | Approval flow (Task scenario) | Usability | Không tìm được nơi duyệt đăng ký đang Pending — phải mở User Guide mới biết; tab điều hướng gây khó hiểu | Quan sát think-aloud P3, P5 (Systemic) | 4 | Thêm badge số lượng "Pending" trên tab liên quan; đổi tên tab rõ nghĩa hơn (vd "Duyệt đăng ký") | [images/usability_bug/usability_bug2](images/usability_bug/usability_bug2.png) | 23:32 |
+| F-020 | Event list | Usability | Bấm vào tên sự kiện không mở chi tiết — phải dùng đúng icon con mắt, khác hành vi kỳ vọng quen thuộc (row-click) | Quan sát think-aloud P1, P4, P5 (Systemic) | 3 | Cho phép click cả dòng (row-click) để mở chi tiết, giữ icon mắt như lối tắt phụ | [images/usability_bug/usability_bug3](images/usability_bug/usability_bug3.png) | 23:33 |
+| F-021 | Event list | Bug | Kết quả search bị mất khi quay lại danh sách sau khi xem chi tiết sự kiện — danh sách trả về mặc định thay vì giữ kết quả search | Quan sát think-aloud P1 | 3 | Giữ lại query/filter state khi back về danh sách (URL params hoặc session state) | [images/usability_bug/usability_bug4](images/usability_bug/usability_bug4.png) | 23:34|
+| F-022 | Add/Edit Event form | Bug | Thiếu validate: ngày đăng ký (registration date) có thể diễn ra sau ngày check-in của cùng sự kiện | Quan sát P1 (nghi vấn logic, cần kiểm tra độc lập) | 3 | Thêm validate ràng buộc registration date ≤ check-in date ở form Add/Edit Event | [images/usability_bug/usability_bug5](images/usability_bug/usability_bug5.png) | 23:35 |
+| F-023 | Toàn hệ thống | Usability | Web load chậm liên tục, không có loading state khiến người dùng không biết đang tải hay bị treo | Quan sát think-aloud P3 | 3 | Thêm spinner/skeleton loading; áp dụng lazy loading và caching dữ liệu | [images/usability_bug/usability_bug6](images/usability_bug/usability_bug6.jpg) | 23:36 |
+| F-024 | A4 — Review Students | Usability | Danh sách Review chỉ hiện dạng hàng, không link đến thông tin chi tiết participant để xác minh hợp lệ trước khi duyệt | Quan sát think-aloud P4 | 2 | Thêm link/click-through từ mỗi review sang thông tin chi tiết participant | [images/usability_bug/usability_bug7](images/usability_bug/usability_bug7.png) | 23:37 |
+| F-025 | Event list (bảng chính) | Usability | Bảng sự kiện quá nhiều cột phải cuộn ngang; không biết có thể cuộn cho tới khi để ý thanh cuộn; cột quan trọng (số học sinh/giảng viên/thời gian đăng ký) nằm cuối, không liền kề | Quan sát think-aloud P1 | 2 | Ưu tiên hiển thị cột quan trọng ở đầu bảng; thêm chỉ báo trực quan (shadow/arrow) báo hiệu có thể cuộn ngang | [images/usability_bug/usability_bug8](images/usability_bug/usability_bug8.png) | 23:38 |
+| F-026 | Event list (filter) | Usability | Nút "All status"/"All time" hiện dropdown thay vì điều hướng như kỳ vọng dựa trên hành vi các nút khác (vd +Add Event) | Quan sát think-aloud P1 | 2 | Thêm icon chevron trên các nút dropdown để phân biệt với nút điều hướng | [images/usability_bug/usability_bug9](images/usability_bug/usability_bug9.png) | 23:39 |
+| F-027 | Header/Tabs (toàn hệ thống) | Usability | Header/tab phía trên thiếu padding, màu tab active/inactive gần giống màu nền, khó nhận biết ngay khi vào trang | Quan sát think-aloud P1 | 2 | Tăng contrast màu tab active/inactive với nền; thêm padding dưới header | [images/usability_bug/usability_bug10](images/usability_bug/usability_bug10.png) | 23:40|
+| F-028 | Pagination (toàn hệ thống) | Usability | Thanh chuyển trang bị đẩy xuống rất xa khi chọn hiển thị 100 dòng/trang, gây khó khăn khi chuyển trang/đổi số dòng | Quan sát think-aloud P1 | 1 | Cố định (sticky) thanh pagination ở cuối viewport thay vì cuối bảng | [images/usability_bug/usability_bug11](images/usability_bug/usability_bug11.png) | 23:41 |
 
 ---
 
@@ -20,16 +36,14 @@
 
 | Type | Số lượng |
 |---|---|
-| Bug | |
-| Usability | |
-| **Tổng** | |
+| Bug | 17 |
+| Usability | 11 |
+| **Tổng** | **28** |
 
 | Severity | Số lượng |
 |---|---|
-| 0 - Cosmetic | |
-| 1 - Minor | |
-| 2 - Moderate | |
-| 3 - Major | |
-| 4 - Critical | |
-
-**Đối chiếu Google Form:** Tổng số finding đã submit qua form = [x], khớp với bảng trên = ✅/❌
+| 0 - Cosmetic | 0 |
+| 1 - Minor | 3 (F-002, F-012, F-028) |
+| 2 - Moderate | 12 (F-001, F-005, F-006, F-008, F-009, F-010, F-014, F-016, F-024, F-025, F-026, F-027) |
+| 3 - Major | 11 (F-003, F-004, F-007, F-011, F-013, F-015, F-017, F-020, F-021, F-022, F-023) |
+| 4 - Critical | 2 (F-018, F-019) |
