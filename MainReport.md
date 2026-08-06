@@ -1,10 +1,8 @@
 # HW03 — Main Report
 ## GUI & Usability Testing on EMS (Event Management System)
 
-**Họ tên:** Nguyễn Bình Minh Phương
+**Họ tên:** Nguyễn Bình Minh Phương     
 **MSSV:** 23127104
-**Hệ thống kiểm thử:** https://prod-dev.ems-fitus.cloud
-
 ---
 
 ## 1. Scenario & Screens
@@ -26,7 +24,7 @@ Cả 3 screen đều thuộc route `/dashboard/admin/...` và được test trê
 
 ## 2. Task 1B — Checklist Execution Results (chi tiết)
 
-> File nguồn: `04_checklist_execution.md`. Checklist gồm 4 nhóm tiêu chí (IA-01 General UI, IA-02 Forms, IA-03 Navigation, IA-04 Feedback & State), áp dụng cho mỗi screen (12–14 item/nhóm × 4 nhóm = 50 item/screen).
+> File tổng hợp chi tiết: [ChecklistExecution.md](ChecklistExecution.md). Checklist gồm 4 nhóm tiêu chí (IA-01 General UI, IA-02 Forms, IA-03 Navigation, IA-04 Feedback & State), áp dụng cho mỗi screen.
 
 ### 2.1. Kết quả tổng quan theo screen
 
@@ -110,7 +108,7 @@ Vấn đề nổi bật nhất qua checklist là **IA-01-07 (Responsive) Fail tr
 
 ## 3. Task 2 — Usability Testing Report (chi tiết)
 
-> File nguồn: `06_usability_testing.md`.
+> File chi tiết: [UserTestingEvidence.md](UserTestingEvidence.md).
 
 ### 3.1. Thiết kế nghiên cứu
 
@@ -142,14 +140,13 @@ Vấn đề nổi bật nhất qua checklist là **IA-01-07 (Responsive) Fail tr
 | **P4** | Completed | 01:00 | 0 | 50.0 | Bấm vào tên sự kiện không mở chi tiết (gây bối rối ban đầu); danh sách Review chỉ hiện dạng hàng, không dẫn tới thông tin chi tiết người dùng nên không biết cách xác minh tính hợp lệ trước khi duyệt. |
 | **P5** | Completed | 08:41 | 2 | 35.0 | Loay hoay không tìm được đường vào trang admin; bấm vào tên sự kiện chờ trang chi tiết hiện ra nhưng không có phản hồi; lọc theo Pending rồi không thấy nút duyệt, phải mở User Guide mới biết; không tìm thấy mã code của học sinh để check-in, định thoát ra tạo tài khoản sinh viên mới chỉ để lấy mã. |
 
-*Lưu ý: dữ liệu gốc của P2 có một điểm chưa nhất quán giữa ghi chú "Time on task: 01:15" trong log quan sát và giá trị "03:00" dùng trong bảng tổng hợp Metrics gốc — báo cáo này dùng giá trị đã được dùng để tính trung bình toàn nhóm (03:00) để đảm bảo nhất quán với con số trung bình 04:26 bên dưới; nên đối chiếu lại video recording (https://youtu.be/p3lxP7p3pfs) nếu cần độ chính xác tuyệt đối cho riêng session này.*
 
 ### 3.3. Kết quả tổng hợp Metrics
 
 | Metric | Giá trị |
 |---|---|
 | Task success rate | 4/5 completed, 1/5 partial (80.0% completed) |
-| Thời gian trung bình | 04:26 (phút:giây) |
+| Thời gian trung bình | 03:97 (phút:giây) |
 | Số lỗi/hesitation trung bình | 2.6 |
 | Điểm SUS trung bình | **53.5/100** (min 35.0 — P5, max 75.0 — P3) |
 
@@ -173,7 +170,7 @@ Vấn đề nổi bật nhất qua checklist là **IA-01-07 (Responsive) Fail tr
 
 Đáng chú ý: **câu hỏi SUS số 9 ("Tôi cảm thấy tự tin khi sử dụng hệ thống")** có điểm cao ở mọi participant (Q9 trong bảng = item 9 gốc) trong khi câu hỏi probe riêng về Trust ("bạn có tin chắc hệ thống đã ghi nhận đúng hành động của mình không?") lại nhận phản hồi tiêu cực từ nhiều người (P2 "Không hoàn toàn tin tưởng", P3 "Không tin"). Điều này cho thấy có sự khác biệt giữa "tự tin thao tác" và "tin tưởng kết quả hệ thống ghi nhận" — một khoảng trống về **feedback xác nhận hành động**, khớp với các Fail liên quan Nielsen #1 (Visibility) ở Task 1B (xem Mục 5.2).
 
-### 3.5. Ranked Findings (đầy đủ 11 finding, Severity 0–4)
+### 3.5. Ranked Findings 
 
 | # | Finding | Type | Phạm vi | Sev. | Người gặp | Đề xuất khắc phục |
 |---|---|---|---|---|---|---|
@@ -203,9 +200,9 @@ Vấn đề nổi bật nhất qua checklist là **IA-01-07 (Responsive) Fail tr
 
 ---
 
-## 4. Task 3 — Cross-Platform Compatibility Report (chi tiết)
+## 4. Task 3 — Cross-Platform Compatibility 
 
-> File nguồn: `07_cross_platform_matrix.md`.
+> File chi tiết: [CrossPlatformMatrix.md](CrossPlatformMatrix.md).
 
 ### 4.1. Phạm vi kiểm thử
 
@@ -259,8 +256,6 @@ Kết quả cho thấy rõ ràng đây **không phải lỗi tương thích trì
 | Task 1B (heuristic expert review) | IA-01-07 Fail trên **cả 3/3 screen** (F-003, F-007, F-011) |
 | Task 3 (cross-browser thực tế trên BrowserStack) | iOS Safari Phone Fail **cả 3/3 screen**; Android Tablet Fail **2/3 screen** (F-013, F-015, F-016, F-017 — trùng root cause với F-003/007/011) |
 
-→ Đây là finding có độ tin cậy cao nhất trong toàn bộ báo cáo vì được xác nhận bằng 2 phương pháp độc lập (đánh giá heuristic tĩnh và test rendering thực tế trên thiết bị thật), không phải chỉ dựa trên nhận định chủ quan của một người kiểm thử. **Đây cũng là gap lớn nhất chưa được kiểm chứng bởi Task 2**, vì usability testing chỉ chạy trên desktop — nghĩa là mức độ ảnh hưởng thực tế của lỗi responsive lên trải nghiệm người dùng thật vẫn còn là một khoảng trống (xem Mục 6 — Hạn chế).
-
 ### 5.2. Thiếu "Visibility of system status" (Nielsen #1) — nối kết giữa checklist và điểm Trust thấp
 
 Task 1B ghi nhận nhiều Fail thuộc heuristic Nielsen #1: thiếu loading state (F-002), không cảnh báo mất mạng (F-005), thiếu active-state chỉ báo vị trí hiện tại (F-012), không có toast khi Export rỗng (F-009). Độc lập với đó, Task 2 ghi nhận: mặc dù điểm SUS-item "tự tin thao tác" cao, **probe question về Trust lại nhận phản hồi tiêu cực từ 2/5 participant** ("Không tin", "Không hoàn toàn tin tưởng" khi được hỏi hệ thống có ghi nhận đúng hành động duyệt/check-in hay không). Hai kết quả này cùng trỏ về một root cause: hệ thống thực hiện hành động nhưng **không luôn xác nhận rõ ràng bằng tín hiệu trực quan**, khiến người dùng phải tự suy đoán liệu thao tác đã thành công hay chưa.
@@ -295,7 +290,7 @@ Task 1B ghi nhận 2 lỗi navigation ở mức "kỹ thuật": mất pagination
 
 ---
 
-## 7. Đề xuất ưu tiên tổng thể (Roadmap hợp nhất từ cả 3 task)
+## 7. Đề xuất ưu tiên tổng thể 
 
 **P0 — Khắc phục ngay (chặn task chính, Sev.4):**
 - F-018: Đổi label "barcode" → "Member code" nhất quán, hiển thị rõ khu vực nhập ngay trên màn hình Check-in.
@@ -346,16 +341,15 @@ Cả 3 phương pháp kiểm thử đều hội tụ về hai nhóm vấn đề 
 
 ## 10. Danh mục file đính kèm
 
-- `01_GROUP_gui_checklist.md` (dùng chung nhóm)
-- `03_main_report.md` (file này)
-- `04_checklist_execution.md`
-- `05_bug_reports.md`
-- `06_usability_testing.md`
-- `07_cross_platform_matrix.md`
-- `08_bug_usability_findings_log.md`
-- `09_ai_audit_report.md`
-- `10_ai_critique.md`
-- `11_git_commit_log.md`
-- `12_agent_skill_demo.md`
+- `Group04_Artifact` (dùng chung nhóm)
+- `MainReport.md` (file này)
+- `ChecklistExecution.md`
+- `UserTestingEvidence.md`
+- `CrossPlatformMatrix.md`
+- `BugUsabilityFindingsLog.md`
+- `AI_Audit_report.md`
+- `AI_critique.md`
+- `GitCommitLog.md`
+- `AgentSkillDemo.md`
 - `README.md`
-- Thư mục ảnh/screenshots: `/screenshots/`
+- Thư mục ảnh/screenshots: `/images/`

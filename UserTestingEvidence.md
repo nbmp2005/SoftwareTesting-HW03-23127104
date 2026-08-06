@@ -323,7 +323,7 @@ và xác nhận là hệ thống đã ghi nhận thành công."
 | Participant | Task Success | Time on task | Số lỗi/hesitation |
 |---|---|---|---|
 | P1 | Partial | 05:30 | 9 |
-| P2 | Completed | 03:00 | 1 |
+| P2 | Completed | 01:15 | 1 |
 | P3 | Completed | 04:00 | 1 |
 | P4 | Completed | 01:00 | 0 |
 | P5 | Completed | 08:41 | 2 |
